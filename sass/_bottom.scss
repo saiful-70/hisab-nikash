@@ -1,0 +1,184 @@
+//bottom panel
+.bottom {
+
+}
+
+//input and add area
+.add {
+    @include centering;
+    padding: 1rem 0;
+    background-color: $color-primary-light;
+    
+
+    & > * {
+        height: 4rem;
+        margin-left: 1rem;
+        border: none;
+        border-radius: 1rem;
+        border: 2px solid $color-income-light;
+
+        &:focus {
+            outline: none;
+            border: 3px solid $color-income-light;
+        }
+    }
+
+    &__type {
+        width: 5rem;
+        font-size: 2rem;
+        padding: 0 .2rem;
+        color: $color-income-dark;
+        font-weight: 600;
+    }
+
+    &__description {
+        width: 25rem;
+    }
+
+    &__value {
+        width: 13rem;
+    }
+
+    &__btn {
+        width: 4rem;
+        font-size: 3rem;
+        border-radius: 50%;
+        cursor: pointer;
+        color: $color-income-dark;
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+
+}
+
+//changing focus
+.red-focus {
+
+    & > * {
+        border: 2px solid $color-expense-light;
+
+        &:focus {
+            border: 3px solid $color-expense-light;
+        }
+    }
+
+    .add__type {
+        color: $color-expense-dark;
+    }
+
+    .add__btn {
+        color: $color-expense-dark;
+    }
+    
+}
+
+
+//income and expense list
+.inc-exp-list {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.income,
+.expense {
+    width: 50rem;
+    font-size: 1.5rem;
+
+    &__title {
+        text-align: center;
+        padding: .7rem 0;
+    }
+}
+
+.income {
+
+    &__title {
+        background-color: $color-income-light;
+        border-right: 2px solid $color-income-dark;
+
+        &:hover {
+            background-color: $color-income-dark;
+        }
+    }
+}
+
+.expense {
+
+    &__title {
+        background-color: $color-expense-light;
+
+        &:hover {
+            background-color: $color-expense-dark;
+        }
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: .5rem 2rem;
+    font-size: 1.6rem;
+    color: rgb(41, 40, 40);
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+
+    &--inc {
+        border-bottom: 2px solid $color-income-dark;
+    }
+
+    &--inc &__id,
+    &--inc &__value {
+            color: $color-income-dark;
+    }
+
+    &--exp {
+        border-bottom: 2px solid $color-expense-dark;
+    }
+
+    &--exp &__id,
+    &--exp &__value {
+        color: $color-expense-dark;
+    }
+
+    &__id {
+        font-weight: 600;
+    }
+
+    &__description {
+        justify-self: start;
+    }
+
+    &__value {
+        transform: translateX(3rem);
+        transition: transform .5s;
+    }
+
+    &:hover &__value {
+        transform: translateX(1.5rem);
+        font-weight: 600;
+    }
+
+    &__delete {
+        visibility: hidden;
+        cursor: pointer;
+        height: 2rem;
+        width: 2rem;
+        border: 1px solid $color-expense-dark;
+        border-radius: 50%;
+        background-color: $color-primary-light;
+        color: $color-expense-dark;
+        font-size: 1rem;
+        transition: visibility .1s .1s;
+    }
+
+    &:hover &__delete {
+        visibility: visible;
+    }
+}

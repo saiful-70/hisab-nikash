@@ -1,0 +1,13 @@
+.heading {
+    &-primary {
+        text-align: center;
+        font-size: 4rem;
+        line-height: 1;
+        margin: 0;
+    }
+
+    &-secondary {
+        font-size: 2rem;
+        margin: 0;
+    }
+}

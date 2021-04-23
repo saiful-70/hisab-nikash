@@ -1,0 +1,56 @@
+//top
+.top {
+    background-color: #ff6348;
+    padding: 2rem 0;
+}
+
+//date and time area
+.calender {
+    @include centering;
+    flex-direction: column;
+
+    font-size: 2rem;
+    margin: 2rem 0;
+    // color: #F79F1F;
+
+    &__day {
+        font-weight: 600;
+        padding: .5rem 1rem;
+
+        background-color: $color-dark;
+    }
+}
+
+//total calculating area
+.calculate {
+    @include centering;
+    flex-direction: column;
+    font-size: 2rem;
+
+    & > * {
+        padding: 1rem 2rem;
+        font-weight: 600;
+        width: 30rem;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__total {
+        background-color: $color-nutral-dark;
+    }
+
+    &__inc {
+        background-color: $color-income-light;
+    }
+
+    &__exp {
+        background-color: $color-expense-light;
+    }
+}
+
+// .heading-title {
+//     margin: 2rem 0;
+// }

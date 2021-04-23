@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
+  color: #fff; }
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  height: 100vh;
+  margin: 0 auto; }
+
+.heading-primary {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1;
+  margin: 0; }
+
+.heading-secondary {
+  font-size: 2rem;
+  margin: 0; }
+
+.top {
+  background-color: #ff6348;
+  padding: 2rem 0; }
+
+.calender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  margin: 2rem 0; }
+  .calender__day {
+    font-weight: 600;
+    padding: .5rem 1rem;
+    background-color: #1b2b3b; }
+
+.calculate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem; }
+  .calculate > * {
+    padding: 1rem 2rem;
+    font-weight: 600;
+    width: 30rem;
+    text-align: center; }
+    .calculate > *:not(:last-child) {
+      margin-bottom: 1rem; }
+  .calculate__total {
+    background-color: #F79F1F; }
+  .calculate__inc {
+    background-color: #2ecc71; }
+  .calculate__exp {
+    background-color: #e74c3c; }
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: #ecf0f1; }
+  .add > * {
+    height: 4rem;
+    margin-left: 1rem;
+    border: none;
+    border-radius: 1rem;
+    border: 2px solid #2ecc71; }
+    .add > *:focus {
+      outline: none;
+      border: 3px solid #2ecc71; }
+  .add__type {
+    width: 5rem;
+    font-size: 2rem;
+    padding: 0 .2rem;
+    color: #27ae60;
+    font-weight: 600; }
+  .add__description {
+    width: 25rem; }
+  .add__value {
+    width: 13rem; }
+  .add__btn {
+    width: 4rem;
+    font-size: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #27ae60; }
+    .add__btn:hover {
+      background-color: #bdc3c7; }
+
+.red-focus > * {
+  border: 2px solid #e74c3c; }
+  .red-focus > *:focus {
+    border: 3px solid #e74c3c; }
+
+.red-focus .add__type {
+  color: #c0392b; }
+
+.red-focus .add__btn {
+  color: #c0392b; }
+
+.inc-exp-list {
+  display: flex;
+  justify-content: center;
+  background-color: #fff; }
+
+.income,
+.expense {
+  width: 50rem;
+  font-size: 1.5rem; }
+  .income__title,
+  .expense__title {
+    text-align: center;
+    padding: .7rem 0; }
+
+.income__title {
+  background-color: #2ecc71;
+  border-right: 2px solid #27ae60; }
+  .income__title:hover {
+    background-color: #27ae60; }
+
+.expense__title {
+  background-color: #e74c3c; }
+  .expense__title:hover {
+    background-color: #c0392b; }
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .5rem 2rem;
+  font-size: 1.6rem;
+  color: #292828; }
+  .item:hover {
+    background-color: #bdc3c7; }
+  .item--inc {
+    border-bottom: 2px solid #27ae60; }
+  .item--inc .item__id,
+  .item--inc .item__value {
+    color: #27ae60; }
+  .item--exp {
+    border-bottom: 2px solid #c0392b; }
+  .item--exp .item__id,
+  .item--exp .item__value {
+    color: #c0392b; }
+  .item__id {
+    font-weight: 600; }
+  .item__description {
+    justify-self: start; }
+  .item__value {
+    transform: translateX(3rem);
+    transition: transform .5s; }
+  .item:hover .item__value {
+    transform: translateX(1.5rem);
+    font-weight: 600; }
+  .item__delete {
+    visibility: hidden;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid #c0392b;
+    border-radius: 50%;
+    background-color: #ecf0f1;
+    color: #c0392b;
+    font-size: 1rem;
+    transition: visibility .1s .1s; }
+  .item:hover .item__delete {
+    visibility: visible; }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hisab-Nikash</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="top">
+            <h1 class="heading-primary heading-title">Monthly Budget</h1>
+            <section class="calender">
+                <div class="calender__day"></div>
+                <div class="calender__date">%10%, %october%, %2020%</div>
+            </section>
+
+            <section class="calculate">
+                <div class="calculate__total">Remain : <span class="calculate__total--value"></span></div>
+                <div class="calculate__inc">Income : <span class="calculate__inc--value"></span></div>
+                <div class="calculate__exp">Expense : <span class="calculate__exp--value"></span></div>
+            </section>
+        </div>
+
+        <div class="bottom">
+            <div class="add">
+                <select class="add__type">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">-</option>
+                </select>
+                <input type="text" class="add__description" placeholder="Add Description">
+                <input type="number" class="add__value" placeholder="Add Value">
+                <button class="add__btn">&#10003;</button>
+            </div>
+
+            <div class="inc-exp-list">
+
+                <div class="income">
+                    <h2 class="income__title heading-secondary">Income List</h2>
+
+                    <div class="income-list">
+                        <!--<div id="item-01" class="item item--inc">
+                            <div class="item__id">1.</div>
+                            <div class="item__description">Just amount</div>
+                            <div class="item__value">+ 10000
+                                <button class="item__delete">&#10005;</button>
+                            </div>
+                        </div>
+
+                        <div id="item-02" class="item item--inc">
+                            <div class="item__id">2.</div>
+                            <div class="item__description">Just amount</div>
+                            <div class="item__value">+ 101000
+                                <button class="item__delete">&#10005;</button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="expense">
+                    <h2 class="expense__title heading-secondary">Expense List</h2>
+                    
+                    <div class="expense-list">
+                        <!-- <div id="item-01" class="item item--exp">
+                            <div class="item__id">1.</div>
+                            <div class="item__description">Just amount</div>
+                            <div class="item__value">- 10000
+                                <button class="item__delete">&#10005;</button>
+                            </div>
+                        </div>
+
+                        <div id="item-02" class="item item--exp">
+                            <div class="item__id">2.</div>
+                            <div class="item__description">Just amount</div>
+                            <div class="item__value">- 10000
+                                <button class="item__delete">&#10005;</button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
